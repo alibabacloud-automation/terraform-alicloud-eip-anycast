@@ -1,31 +1,31 @@
 variable "anycast_eip_address_name" {
   type        = string
   description = "The name of any cast service."
-  default = null
+  default     = null
 }
 
 variable "bandwidth" {
   type        = number
   description = "The bandwidth of eip anycast service."
-  default = null
+  default     = null
 }
 
 variable "description" {
   type        = string
   description = "The description of any cast service."
-  default = null
+  default     = null
 }
 
 variable "internet_charge_type" {
   type        = string
   description = "The Change type of Eip Anycast service."
-  default = "PayByBandwidth"
+  default     = "PayByBandwidth"
 }
 
 variable "service_location" {
   type        = string
   description = "The location of any cast service."
-  default = "international"
+  default     = "international"
 }
 
 variable "bind_instance_id" {
