@@ -1,18 +1,14 @@
-Terraform module which creates Anycast Eip on Alibaba Cloud.
-
 terraform-alicloud-eip-anycast
 =====================================================================
 
-English | [简体中文](https://github.com/terraform-alicloud-modules/terraform-alicloud-eip-anycast/blob/master/README-CN.md)
+本 Module 用于在阿里云创建 [任播弹性公网IP(Anycast EIP)](https://help.aliyun.com/document_detail/169284.html).
 
-Terraform module which creates Anycast Eip on Alibaba Cloud.
+本 Module 支持创建以下资源:
 
-These types of resources are supported:
+* [任播弹性公网IP(Eipanycast_Anycast_Eip_Address)](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/eipanycast_anycast_eip_address)
+* [分配任播弹性公网IP(Eipanycast_Anycast_Eip_Address_Attachment)](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/eipanycast_anycast_eip_address_attachment)
 
-* [Eipanycast_Anycast_Eip_Address](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/eipanycast_anycast_eip_address)
-* [Eipanycast_Anycast_Eip_Address_Attachment](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/eipanycast_anycast_eip_address_attachment)
-
-## Requirements
+## 版本要求
 
 | Name | Version |
 |------|---------|
@@ -25,7 +21,7 @@ These types of resources are supported:
 |------|---------|
 | <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | >= 1.131.0 |
 
-## Usage
+## 用法
 
 ```hcl
 provider "alicloud" {
@@ -68,6 +64,7 @@ resource "alicloud_slb" "default" {
   vswitch_id          = alicloud_vswitch.default.id
 }
 
+
 module "example" {
   source = "terraform-alicloud-modules/eip-anycast/alicloud"
   create = true
@@ -77,21 +74,21 @@ module "example" {
 }
 ```
 
-Submit Issues
--------------
-If you have any problems when using this module, please opening a [provider issue](https://github.com/aliyun/terraform-provider-alicloud/issues/new) and let us know.
+提交问题
+------
+如果在使用该 Terraform Module 的过程中有任何问题，可以直接创建一个 [Provider Issue](https://github.com/aliyun/terraform-provider-alicloud/issues/new)，我们将根据问题描述提供解决方案。
 
-**Note:** There does not recommend to open an issue on this repo.
+**注意:** 不建议在该 Module 仓库中直接提交 Issue。
 
-Authors
+作者
 -------
 Created and maintained by Alibaba Cloud Terraform Team(terraform@alibabacloud.com)
 
-License
+许可
 ----
 Apache 2 Licensed. See LICENSE for full details.
 
-Reference
+参考
 ---------
 * [Terraform-Provider-Alicloud Github](https://github.com/aliyun/terraform-provider-alicloud)
 * [Terraform-Provider-Alicloud Release](https://releases.hashicorp.com/terraform-provider-alicloud/)
