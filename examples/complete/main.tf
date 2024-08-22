@@ -44,7 +44,7 @@ module "example" {
   anycast_eip_address_name = "tf_eip_address_name"
   bandwidth                = 200
   description              = "The description of any cast service."
-  internet_charge_type     = "PayByBandwidth"
+  internet_charge_type     = "PayByTraffic"
   service_location         = "international"
   bind_instance_id         = alicloud_slb.default.id
   bind_instance_region_id  = data.alicloud_regions.default.regions.0.id
